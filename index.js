@@ -1,6 +1,6 @@
 const express = require('express');
 const helmet = require("helmet");
-const health = require('./routes/health');
+const health = require('./routes/health'); // This comes from ./routes/health.js
 const product = require('./routes/product');
 
 // Instantiating the app
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/health', health)
+app.use('/health', health) // This is where it gets attached
 app.use('/product', product)
 
 // Here is where we want to break out our routes
