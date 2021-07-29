@@ -1,32 +1,36 @@
-const express = require('express');
+const express = require("express");
 const helmet = require("helmet");
-const health = require('./routes/health'); // This comes from ./routes/health.js
-const product = require('./routes/product');
+const cors = require("cors");
+
+require("dotenv").config();
+
+// Set the operating variables
+const port = process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === "production";
 
 // Instantiating the app
 const app = express();
 
-// Set the port
-const port = process.env.PORT || 3000;
-
+// Top Level Middlewares
 app.use(helmet());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-// Middlewares
+// Routers
+const health = require("./routes/health");
+const products = require("./routes/products");
+
+// Our Custom logging middleware
 app.use((req, res, next) => {
-    console.log(`Method: ${req.method}, URL: ${req.url}, Time: ${Date.now()}`)
-    next()
-})
+  console.log(`Method: ${req.method}, URL: ${req.url}, Time: ${Date.now()}`);
+  next();
+});
 
-app.use('/health', health) // This is where it gets attached
-app.use('/product', product)
-
-// Here is where we want to break out our routes
-app.get('/hello/:name', (req, res) => {
-    res.json({message: `Hello ${req.params.name}`})
-})
+// Attach Routers
+app.use("/health", health);
+app.use("/products", products);
 
 app.listen(port, () => {
-    console.log('Server running on port: ' + port);
-})
-// werw
+  console.log("Server running on port: " + port);
+});
