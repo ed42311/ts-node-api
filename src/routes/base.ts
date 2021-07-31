@@ -11,6 +11,6 @@ const get404 = (req: Request, res: Response) => {
   res.status(404).send("No know route");
 };
 
-router.get("/health", healthChecker);
+router.get("/", healthChecker);
 
 export { router as base, get404 };

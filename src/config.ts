@@ -1,5 +1,8 @@
 // Configuration for database connection Pool
 import { Pool, PoolConfig } from "pg";
+import { config } from "dotenv";
+
+config();
 
 const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
 const isProduction = process.env.NODE_ENV === "production";

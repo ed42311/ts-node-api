@@ -1,5 +1,9 @@
 # DB
 
+## mac
+
+brew install postgres
+
 ## Local
 
 https://www.taniarascia.com/node-express-postgresql-heroku/#set-up-postgresql-database
@@ -22,7 +26,7 @@ price INTEGER
 );
 CREATE TABLE
 shop_api=> INSERT INTO products (name, price)
-shop_api-> VALUES ('Horsey Saddle', 5000);
+VALUES ('Horsey Saddle', 5000);
 INSERT 0 1
 ```
 
