@@ -1,3 +1,7 @@
-node_modules
+# Local
 .env
 .vscode
+
+# npm
+node_modules
+npm-debug.log
