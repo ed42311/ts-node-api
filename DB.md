@@ -1,12 +1,12 @@
 # DB
 
+https://www.taniarascia.com/node-express-postgresql-heroku/#set-up-postgresql-database
+
 ## mac
 
 brew install postgres
 
 ## Local
-
-https://www.taniarascia.com/node-express-postgresql-heroku/#set-up-postgresql-database
 
 ```
 ❯ psql postgres
@@ -31,3 +31,7 @@ INSERT 0 1
 ```
 
 ## Docker container
+
+## Resources
+
+[heroku node posgres self signed certificate](https://stackoverflow.com/questions/61097695/self-signed-certificate-error-during-query-the-heroku-hosted-postgres-database)
