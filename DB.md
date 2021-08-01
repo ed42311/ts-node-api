@@ -1,8 +1,12 @@
 # DB
 
-## Local
-
 https://www.taniarascia.com/node-express-postgresql-heroku/#set-up-postgresql-database
+
+## mac
+
+brew install postgres
+
+## Local
 
 ```
 ❯ psql postgres
@@ -22,8 +26,12 @@ price INTEGER
 );
 CREATE TABLE
 shop_api=> INSERT INTO products (name, price)
-shop_api-> VALUES ('Horsey Saddle', 5000);
+VALUES ('Horsey Saddle', 5000);
 INSERT 0 1
 ```
 
 ## Docker container
+
+## Resources
+
+[heroku node posgres self signed certificate](https://stackoverflow.com/questions/61097695/self-signed-certificate-error-during-query-the-heroku-hosted-postgres-database)

@@ -13,6 +13,14 @@ Clone this repo then run
 should return
 `{"message":"OK"}`
 
+### Module Breakdown
+
+#### api (this)
+
+#### [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+[Express Cors Typescript][1]
+
 ## Prod
 
 ### Setup 1st run
@@ -24,7 +32,7 @@ Creating app... done, ⬢ stormy-harbor-71028
 https://stormy-harbor-71028.herokuapp.com/ | https://git.heroku.com/stormy-harbor-71028.git
 ```
 
-Here is your new endpoint:  `https://<random-name>.herokuapp.com/`
+Here is your new endpoint: `https://<random-name>.herokuapp.com/`
 
 You can check on success with `git remote -v` you should see something like this:
 
@@ -43,6 +51,8 @@ curl https://stormy-harbor-71028.herokuapp.com/
 {"message":"OK"}%
 ```
 
-### Pushing Code to Prod 
+### Pushing Code to Prod
 
 commit your code and push just with the `heroku` remote
+
+[1]: https://brianflove.com/2017-03-22/express-cors-typescript/
