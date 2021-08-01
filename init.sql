@@ -5,4 +5,4 @@ CREATE TABLE products (
 );
 
 INSERT INTO products (name, price)
-VALUES ('Horsey Saddle', 5000);
+VALUES ('Widget', 5000);
